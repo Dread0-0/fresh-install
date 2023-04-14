@@ -9,10 +9,12 @@ echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sou
 sudo apt-get update;
 sudo apt-get upgrade -y;
 
-sudo apt install terminator docker-ce docker-ce-cli containerd.io sublime-text git -y && sudo apt purge gnome-terminal gedit thunderbird remmina libreoffice cheese gnome-calculator evince gnome-help -y;
+sudo apt install terminator docker-ce docker-ce-cli containerd.io sublime-text git nodejs npm ghex -y && sudo apt purge gnome-terminal gedit thunderbird remmina libreoffice cheese gnome-calculator evince gnome-help -y;
 
 sudo snap remove snap-store;
 
-wget -qO- https://raw.githubusercontent.com/Dread0-0/fresh-install/main/wallpaper/wallpaper.png > wallpaper.png
+wget -qO- https://raw.githubusercontent.com/Dread0-0/fresh-install/main/wallpaper/wallpaper.png > wallpaper.png;
 
-gsettings set org.gnome.desktop.background picture-uri file:///wallpaper.jpg;
+s=`pwd`;
+
+gsettings set org.gnome.desktop.background picture-uri file://${s}/wallpaper.jpg;
