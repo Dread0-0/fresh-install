@@ -6,10 +6,9 @@ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubun
 
 echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list;
 
-sudo apt-get update;
-sudo apt-get upgrade -y;
+sudo apt-get update && sudo apt-get upgrade -y;
 
-sudo apt install terminator docker-ce docker-ce-cli containerd.io sublime-text git nodejs npm ghex -y && sudo apt purge gnome-terminal gedit thunderbird remmina libreoffice cheese gnome-calculator evince gnome-help -y;
+sudo apt install terminator docker-ce docker-ce-cli containerd.io sublime-text git nodejs npm ghex vim -y && sudo apt purge gnome-terminal gedit thunderbird remmina libreoffice cheese gnome-calculator evince gnome-help -y;
 
 sudo snap remove snap-store;
 
